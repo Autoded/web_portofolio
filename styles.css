@@ -1,0 +1,6 @@
+/* Polosan: hanya beberapa sentuhan kecil */
+html { scroll-behavior: smooth; }
+#navbar.navbar { transition: all .2s ease; }
+#navbar.small { padding-top: .2rem; padding-bottom: .2rem; box-shadow: 0 0.25rem 1rem rgba(0,0,0,.05); }
+header img { object-fit: cover; }
+.card img { object-fit: cover; height: 180px; }
