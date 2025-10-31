@@ -1,82 +1,130 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portofolio Sederhana</title>
-    <!-- Bootstrap CSS -->
+    <title>Portofolio – Versi Improved</title>
+    <meta name="description" content="Portofolio sederhana dengan Bootstrap 5 (improved).">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons (opsional) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top bg-transparent">
       <div class="container">
-        <a class="navbar-brand fw-semibold" href="#home">Nama Kamu</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <a class="navbar-brand fw-semibold" href="#home"><i class="bi bi-code-slash me-1"></i>Autodie_</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navContent">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item ms-lg-2">
+              <button id="themeToggle" class="btn btn-outline-secondary btn-sm d-flex align-items-center gap-2" type="button" aria-label="Toggle tema">
+                <i class="bi bi-moon-stars"></i><span class="d-none d-lg-inline">Tema</span>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Hero -->
-    <header id="home" class="py-5 bg-body-tertiary">
-      <div class="container d-flex flex-column flex-md-row align-items-center gap-4">
-        <img src="https://picsum.photos/seed/you/200" class="rounded-circle shadow-sm" width="140" height="140" alt="Foto profil">
-        <div>
-          <h1 class="h2 mb-2">Halo, saya <span class="text-primary">Nama Kamu</span> 👋</h1>
-          <p class="text-secondary mb-3">Mahasiswa yang belajar HTML, CSS (Bootstrap), dan JavaScript. Ini adalah portofolio sederhana versi polosan.</p>
-          <a href="#projects" class="btn btn-primary btn-sm">Lihat Project</a>
-          <a href="#contact" class="btn btn-outline-primary btn-sm">Kontak</a>
+    <header id="home" class="hero min-vh-100 d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6 order-2 order-lg-1 reveal-up">
+            <span class="badge rounded-pill text-bg-primary mb-3 px-3 py-2">Mahasiswa Web Pemula</span>
+            <h1 class="display-5 fw-bold lh-sm mb-3">Halo, saya <span class="gradient-text">Rio Akbar</span></h1>
+            <p class="lead text-secondary mb-4">Belajar HTML, CSS (Bootstrap), dan JavaScript vanilla. Portofolio ini dibuat <em>tanpa framework</em> tapi tetap modern, responsif, dan ringan.</p>
+            <div class="d-flex gap-2">
+              <a href="#projects" class="btn btn-primary"><i class="bi bi-grid-3x3-gap me-1"></i>Lihat Projects</a>
+              <a href="#contact" class="btn btn-outline-primary"><i class="bi bi-envelope me-1"></i>Kontak</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center reveal-up">
+            <div class="hero-card mx-auto shadow-lg rounded-4 overflow-hidden">
+              <img src="https://picsum.photos/seed/profile/800/600" class="w-100 object-fit-cover" alt="Foto/Ilustrasi">
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="scroll-indicator text-center">
+        <a href="#about" class="btn btn-link link-light text-decoration-none small">
+          Gulir ke bawah<br>
+          <i class="bi bi-chevron-double-down fs-5"></i>
+        </a>
       </div>
     </header>
 
     <!-- About -->
-    <section id="about" class="py-5">
+    <section id="about" class="py-6 bg-body">
       <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-md-6">
-            <h2 class="h4 mb-3">Tentang Saya</h2>
-            <p>Saya sedang belajar dasar-dasar pengembangan web. Fokus pada pembuatan halaman statis, styling dengan Bootstrap, dan interaksi sederhana menggunakan JavaScript vanilla.</p>
-            <ul class="list-unstyled small">
-              <li><i class="bi bi-check-circle me-2"></i>HTML: Struktur halaman</li>
-              <li><i class="bi bi-check-circle me-2"></i>CSS/Bootstrap: Tampilan responsif</li>
-              <li><i class="bi bi-check-circle me-2"></i>JS: Interaksi dasar</li>
-            </ul>
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-7 reveal-up">
+            <h2 class="h3 fw-semibold mb-3">Tentang Saya</h2>
+            <p class="text-secondary">Saya sedang mempelajari dasar-dasar pengembangan web. Fokus pada struktur halaman HTML, styling dengan Bootstrap, dan menambahkan interaksi menggunakan JavaScript vanilla.</p>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <span class="badge rounded-pill text-bg-secondary">HTML</span>
+              <span class="badge rounded-pill text-bg-secondary">CSS</span>
+              <span class="badge rounded-pill text-bg-secondary">Bootstrap 5</span>
+              <span class="badge rounded-pill text-bg-secondary">JavaScript</span>
+            </div>
+            <div class="row g-3 mt-4">
+              <div class="col-sm-6">
+                <div class="p-3 rounded-4 border bg-body-tertiary">
+                  <div class="d-flex justify-content-between small mb-1"><span>HTML</span><span>75%</span></div>
+                  <div class="progress" role="progressbar" aria-label="HTML">
+                    <div class="progress-bar" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 rounded-4 border bg-body-tertiary">
+                  <div class="d-flex justify-content-between small mb-1"><span>CSS/Bootstrap</span><span>65%</span></div>
+                  <div class="progress" role="progressbar" aria-label="CSS">
+                    <div class="progress-bar" style="width: 65%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 rounded-4 border bg-body-tertiary">
+                  <div class="d-flex justify-content-between small mb-1"><span>JavaScript</span><span>45%</span></div>
+                  <div class="progress" role="progressbar" aria-label="JS">
+                    <div class="progress-bar" style="width: 45%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 rounded-4 border bg-body-tertiary">
+                  <div class="d-flex justify-content-between small mb-1"><span>UI/UX</span><span>40%</span></div>
+                  <div class="progress" role="progressbar" aria-label="UI/UX">
+                    <div class="progress-bar" style="width: 40%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <div class="p-4 bg-body-tertiary rounded-4">
-              <h3 class="h6 text-uppercase text-secondary">Skill (contoh)</h3>
-              <div class="mb-3">
-                <div class="d-flex justify-content-between"><span>HTML</span><span>70%</span></div>
-                <div class="progress" role="progressbar" aria-label="HTML">
-                  <div class="progress-bar" style="width: 70%"></div>
-                </div>
+          <div class="col-lg-5 reveal-up">
+            <div class="p-4 rounded-4 border bg-body-tertiary h-100">
+              <h3 class="h6 text-uppercase text-secondary mb-3">Info Singkat</h3>
+              <ul class="list-unstyled small mb-4">
+                <li class="mb-2"><i class="bi bi-person me-2"></i>Nama: <strong>Rio Akbar Pratamaputra</strong></li>
+                <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Domisili: <strong>Bekasi, Jawa Barat</strong></li>
+                <li class="mb-2"><i class="bi bi-mortarboard me-2"></i>Status: <strong>Mahasiswa & Pekerja Swasta</strong></li>
+                <li><i class="bi bi-envelope me-2"></i>Email: <strong>rioakbar62@gmail.com</strong></li>
+              </ul>
+              <div class="d-flex gap-2">
+                <a class="btn btn-outline-secondary btn-sm" href="https://github.com/Autoded" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a class="btn btn-outline-secondary btn-sm" href="https://www.facebook.com/Autodie62" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a class="btn btn-outline-secondary btn-sm" href="https://www.instagram.com/autodie_/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
               </div>
-              <div class="mb-3">
-                <div class="d-flex justify-content-between"><span>CSS/Bootstrap</span><span>60%</span></div>
-                <div class="progress" role="progressbar" aria-label="CSS">
-                  <div class="progress-bar" style="width: 60%"></div>
-                </div>
-              </div>
-              <div class="mb-1">
-                <div class="d-flex justify-content-between"><span>JavaScript</span><span>40%</span></div>
-                <div class="progress" role="progressbar" aria-label="JS">
-                  <div class="progress-bar" style="width: 40%"></div>
-                </div>
-              </div>
-              <p class="text-secondary small mt-3 mb-0">Angka hanya contoh. Silakan ubah sesuai kemampuanmu.</p>
+              <p class="small text-secondary mt-3 mb-0"></p>
             </div>
           </div>
         </div>
@@ -84,44 +132,89 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="py-5 bg-body-tertiary">
+    <section id="projects" class="py-6 bg-body-tertiary">
       <div class="container">
-        <h2 class="h4 mb-4">Proyek Sederhana</h2>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="h3 fw-semibold m-0">Projects</h2>
+          <a href="#" class="btn btn-sm btn-outline-secondary disabled">Lihat Semua</a>
+        </div>
         <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="https://picsum.photos/seed/p1/600/400" class="card-img-top" alt="Project 1">
+          <!-- Project Card 1 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <div class="card h-100 shadow-sm border-0 overflow-hidden">
+              <img src="https://picsum.photos/seed/p1/800/600" class="card-img-top project-thumb" alt="Project 1" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Project 1" data-img="https://picsum.photos/seed/p1large/1200/800" data-desc="Halaman biodata sederhana memakai Bootstrap.">
               <div class="card-body">
                 <h5 class="card-title">Project 1</h5>
-                <p class="card-text small">Deskripsi singkat project. Misal: halaman biodata sederhana dengan Bootstrap.</p>
+                <p class="card-text small text-secondary">Halaman biodata sederhana memakai Bootstrap.</p>
+                <div class="d-flex gap-2">
+                  <span class="badge text-bg-light border">HTML</span>
+                  <span class="badge text-bg-light border">Bootstrap</span>
+                </div>
               </div>
-              <div class="card-footer bg-transparent border-0 pt-0">
-                <a href="#" class="btn btn-sm btn-outline-secondary disabled">Lihat Demo</a>
+              <div class="card-footer bg-body border-0 pt-0">
+                <a class="btn btn-outline-primary btn-sm disabled" href="#">Demo</a>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="https://picsum.photos/seed/p2/600/400" class="card-img-top" alt="Project 2">
+          <!-- Project Card 2 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <div class="card h-100 shadow-sm border-0 overflow-hidden">
+              <img src="https://picsum.photos/seed/p2/800/600" class="card-img-top project-thumb" alt="Project 2" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Project 2" data-img="https://picsum.photos/seed/p2large/1200/800" data-desc="To-do list dengan localStorage (JS vanilla).">
               <div class="card-body">
                 <h5 class="card-title">Project 2</h5>
-                <p class="card-text small">Deskripsi singkat project. Misal: to-do list dengan localStorage.</p>
+                <p class="card-text small text-secondary">To-do list dengan localStorage (JS vanilla).</p>
+                <div class="d-flex gap-2">
+                  <span class="badge text-bg-light border">HTML</span>
+                  <span class="badge text-bg-light border">Bootstrap</span>
+                  <span class="badge text-bg-light border">JavaScript</span>
+                </div>
               </div>
-              <div class="card-footer bg-transparent border-0 pt-0">
-                <a href="#" class="btn btn-sm btn-outline-secondary disabled">Lihat Demo</a>
+              <div class="card-footer bg-body border-0 pt-0">
+                <a class="btn btn-outline-primary btn-sm disabled" href="#">Demo</a>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100">
-              <img src="https://picsum.photos/seed/p3/600/400" class="card-img-top" alt="Project 3">
+          <!-- Project Card 3 -->
+          <div class="col-md-6 col-lg-4 reveal-up">
+            <div class="card h-100 shadow-sm border-0 overflow-hidden">
+              <img src="https://picsum.photos/seed/p3/800/600" class="card-img-top project-thumb" alt="Project 3" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Project 3" data-img="https://picsum.photos/seed/p3large/1200/800" data-desc="Kalkulator sederhana tampilan modern.">
               <div class="card-body">
                 <h5 class="card-title">Project 3</h5>
-                <p class="card-text small">Deskripsi singkat project. Misal: kalkulator sederhana.</p>
+                <p class="card-text small text-secondary">Kalkulator sederhana tampilan modern.</p>
+                <div class="d-flex gap-2">
+                  <span class="badge text-bg-light border">HTML</span>
+                  <span class="badge text-bg-light border">Bootstrap</span>
+                  <span class="badge text-bg-light border">JavaScript</span>
+                </div>
               </div>
-              <div class="card-footer bg-transparent border-0 pt-0">
-                <a href="#" class="btn btn-sm btn-outline-secondary disabled">Lihat Demo</a>
+              <div class="card-footer bg-body border-0 pt-0">
+                <a class="btn btn-outline-primary btn-sm disabled" href="#">Demo</a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Timeline -->
+    <section id="experience" class="py-6 bg-body">
+      <div class="container">
+        <h2 class="h3 fw-semibold mb-4">Experience</h2>
+        <div class="timeline reveal-up">
+          <div class="timeline-item">
+            <div class="timeline-point"></div>
+            <div class="timeline-card">
+              <h5 class="mb-1">Asisten Praktikum (Contoh)</h5>
+              <small class="text-secondary">2024 – Sekarang</small>
+              <p class="small text-secondary mb-0 mt-2">Membantu mahasiswa memahami dasar HTML & CSS, membuat modul tugas sederhana, dan memeriksa hasil praktikum.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-point"></div>
+            <div class="timeline-card">
+              <h5 class="mb-1">Freelance Fivem Car Handling</h5>
+              <small class="text-secondary">2024 - Sekarang</small>
+              <p class="small text-secondary mb-0 mt-2">Mengerjakan Handling untuk kendaraan mod untuk server Fivem.</p>
             </div>
           </div>
         </div>
@@ -129,40 +222,48 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-6 bg-body-tertiary">
       <div class="container">
-        <h2 class="h4 mb-4">Kontak</h2>
-        <div class="row g-4">
-          <div class="col-md-6">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-6 reveal-up">
+            <h2 class="h3 fw-semibold mb-3">Kontak</h2>
+            <p class="text-secondary">Kirim pesan menggunakan form di bawah. Ini hanyalah simulasi; gunakan layanan email/API jika ingin mengirim sungguhan.</p>
             <form id="contactForm" novalidate>
-              <div class="mb-3">
-                <label for="name" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="name" required>
-                <div class="invalid-feedback">Nama wajib diisi.</div>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label" for="name">Nama</label>
+                  <input class="form-control" id="name" type="text" required>
+                  <div class="invalid-feedback">Nama wajib diisi.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-control" id="email" type="email" required>
+                  <div class="invalid-feedback">Email tidak valid.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="message">Pesan</label>
+                  <textarea class="form-control" id="message" rows="4" required></textarea>
+                  <div class="invalid-feedback">Pesan wajib diisi.</div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit"><i class="bi bi-send me-1"></i>Kirim</button>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-                <div class="invalid-feedback">Email tidak valid.</div>
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Pesan</label>
-                <textarea id="message" class="form-control" rows="4" required></textarea>
-                <div class="invalid-feedback">Pesan wajib diisi.</div>
-              </div>
-              <button class="btn btn-primary" type="submit">Kirim</button>
             </form>
           </div>
-          <div class="col-md-6">
-            <div class="p-4 bg-body-tertiary rounded-4">
-              <p class="mb-2"><i class="bi bi-envelope me-2"></i>emailkamu@example.com</p>
-              <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Kota, Indonesia</p>
+          <div class="col-lg-6 reveal-up">
+            <div class="p-4 rounded-4 border bg-body">
+              <h3 class="h6 text-uppercase text-secondary mb-3">Info & Sosial</h3>
+              <ul class="list-unstyled small mb-3">
+                <li class="mb-2"><i class="bi bi-envelope me-2"></i>emailkamu@example.com</li>
+                <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Kota, Indonesia</li>
+              </ul>
               <div class="d-flex gap-2">
-                <a class="btn btn-outline-secondary btn-sm" href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
-                <a class="btn btn-outline-secondary btn-sm" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a class="btn btn-outline-secondary btn-sm" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a class="btn btn-outline-secondary btn-sm" href="#"><i class="bi bi-github"></i></a>
+                <a class="btn btn-outline-secondary btn-sm" href="#"><i class="bi bi-linkedin"></i></a>
+                <a class="btn btn-outline-secondary btn-sm" href="#"><i class="bi bi-instagram"></i></a>
               </div>
-              <p class="small text-secondary mb-0 mt-3">Tip: Ganti link di atas dengan profilmu sendiri.</p>
+              <p class="small text-secondary mb-0 mt-3">Ganti dengan akunmu sendiri.</p>
             </div>
           </div>
         </div>
@@ -170,14 +271,44 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 border-top">
-      <div class="container small d-flex justify-content-between">
+    <footer class="py-4 border-top bg-body">
+      <div class="container small d-flex justify-content-between align-items-center">
         <span>© <span id="year"></span> Nama Kamu</span>
-        <a href="#home" id="toTop" class="link-secondary text-decoration-none">Kembali ke atas ↑</a>
+        <a href="#home" id="backToTop" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-up"></i></a>
       </div>
     </footer>
 
-    <!-- Bootstrap JS + Popper -->
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Project</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="projectModalImg" src="" alt="" class="img-fluid rounded mb-3">
+            <p id="projectModalDesc" class="mb-0 text-secondary"></p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+      <div id="toast" class="toast align-items-center border-0" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Pesan terkirim! (simulasi)
+          </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
